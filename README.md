@@ -1,5 +1,5 @@
 # helloMilvus
-Search 100k images from VNExpress using Milvus and Redis
+Search 100k images from [VNExpress](https://vnexpress.net/) using Milvus and Redis
 
 ### Step 1: Start Milvus server
 ```
