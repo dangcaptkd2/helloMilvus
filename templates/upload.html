@@ -16,6 +16,10 @@
 	  clear: both;
 	  display: table;
 	}
+
+	.title_search {
+		font-size: 40px;
+	}
 </style>
 <title>Banner checking</title>
 <h2>Select a file to upload</h2>
@@ -49,51 +53,97 @@
 {% if rootimage %}
 <div class="row">
 	<div class="column">
-	  	<img src="{{rootimage}}" style="width:100%">
+	  	<img src="{{rootimage}}" style="width:50%">
 	</div>
 </div>
 {% endif %}
-{% if lst_result %}
+{% if lst_result_total %}
+<b class="title_search">Search by global features</b>
 <div class="row">
 	<div class="column">
-	  	<img src="{{lst_result[0][0]}}" alt="{{lst_result[0][1]}}" style="width:100%">
-		<figcaption>{{lst_result[0][1]}}</figcaption>
+	  	<img src="{{lst_result_total[0][0]}}" alt="{{lst_result_total[0][1]}}" style="width:50%">
+		<figcaption>{{lst_result_total[0][1]}}</figcaption>
 	</div>
 	<div class="column">
-	  	<img src="{{lst_result[1][0]}}" alt="{{lst_result[1][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[1][1]}}</figcaption>
+	  	<img src="{{lst_result_total[1][0]}}" alt="{{lst_result_total[1][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[1][1]}}</figcaption>
 	</div>
 	<div class="column">
-	  	<img src="{{lst_result[2][0]}}" alt="{{lst_result[2][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[2][1]}}</figcaption>
+	  	<img src="{{lst_result_total[2][0]}}" alt="{{lst_result_total[2][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[2][1]}}</figcaption>
 	</div>
 </div>
 <div class="row">
 	<div class="column">
-	  	<img src="{{lst_result[3][0]}}" alt="{{lst_result[3][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[3][1]}}</figcaption>
+	  	<img src="{{lst_result_total[3][0]}}" alt="{{lst_result_total[3][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[3][1]}}</figcaption>
 	</div>
 	<div class="column">
-	  	<img src="{{lst_result[4][0]}}" alt="{{lst_result[4][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[4][1]}}</figcaption>
+	  	<img src="{{lst_result_total[4][0]}}" alt="{{lst_result_total[4][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[4][1]}}</figcaption>
 	</div>
 	<div class="column">
-	  	<img src="{{lst_result[5][0]}}" alt="{{lst_result[5][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[5][1]}}</figcaption>
+	  	<img src="{{lst_result_total[5][0]}}" alt="{{lst_result_total[5][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[5][1]}}</figcaption>
 	</div>
 </div>
 <div class="row">
 	<div class="column">
-	  	<img src="{{lst_result[6][0]}}" alt="{{lst_result[6][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[6][1]}}</figcaption>
+	  	<img src="{{lst_result_total[6][0]}}" alt="{{lst_result_total[6][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[6][1]}}</figcaption>
 	</div>
 	<div class="column">
-	  	<img src="{{lst_result[7][0]}}" alt="{{lst_result[7][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[7][1]}}</figcaption>
+	  	<img src="{{lst_result_total[7][0]}}" alt="{{lst_result_total[7][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[7][1]}}</figcaption>
 	</div>
 	<div class="column">
-	  	<img src="{{lst_result[8][0]}}" alt="{{lst_result[8][1]}}" style="width:100%">
-		  <figcaption>{{lst_result[8][1]}}</figcaption>
+	  	<img src="{{lst_result_total[8][0]}}" alt="{{lst_result_total[8][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[8][1]}}</figcaption>
+	</div>
+</div>
+{% endif %}
+{% if lst_result_face %}
+<b class="title_search">Search by the biggest face feature</b>
+<div class="row">
+	<div class="column">
+	  	<img src="{{lst_result_face[0][0]}}" alt="{{lst_result_face[0][1]}}" style="width:50%">
+		<figcaption>{{lst_result_face[0][1]}}</figcaption>
+	</div>
+	<div class="column">
+	  	<img src="{{lst_result_face[1][0]}}" alt="{{lst_result_face[1][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[1][1]}}</figcaption>
+	</div>
+	<div class="column">
+	  	<img src="{{lst_result_face[2][0]}}" alt="{{lst_result_face[2][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[2][1]}}</figcaption>
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+	  	<img src="{{lst_result_face[3][0]}}" alt="{{lst_result_face[3][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[3][1]}}</figcaption>
+	</div>
+	<div class="column">
+	  	<img src="{{lst_result_face[4][0]}}" alt="{{lst_result_face[4][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[4][1]}}</figcaption>
+	</div>
+	<div class="column">
+	  	<img src="{{lst_result_face[5][0]}}" alt="{{lst_result_face[5][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[5][1]}}</figcaption>
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+	  	<img src="{{lst_result_face[6][0]}}" alt="{{lst_result_face[6][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[6][1]}}</figcaption>
+	</div>
+	<div class="column">
+	  	<img src="{{lst_result_face[7][0]}}" alt="{{lst_result_face[7][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_face[7][1]}}</figcaption>
+	</div>
+	<div class="column">
+	  	<img src="{{lst_result_face[8][0]}}" alt="{{lst_result_face[8][1]}}" style="width:50%">
+		  <figcaption>{{lst_result_total[8][1]}}</figcaption>
 	</div>
 </div>
 {% endif %}

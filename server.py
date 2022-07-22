@@ -69,8 +69,8 @@ def upload_file():
             filename = secure_filename(file.filename)
             image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(image_path)
-            result = process(image_path)
-            return render_template('upload.html', rootimage=image_path,lst_result=result)
+            result_total, result_face  = process(image_path)
+            return render_template('upload.html', rootimage=image_path,lst_result_total=result_total, lst_result_face=result_face)
     return render_template('upload.html')
             
     
