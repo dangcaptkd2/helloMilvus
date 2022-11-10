@@ -114,7 +114,7 @@ def main():
     parser.add_argument('--dim_vector', type=int, default=512, help='dimention of vector')
     parser.add_argument('--name_vec', type=str, default='norm_vector_face', help='name of vector')
     parser.add_argument('--description', type=str, default='Collection for image in VNE, include face embedding', help='descrip for schema')
-    parser.add_argument('--target', type=str, default='face', help='face | total')
+    parser.add_argument('--target', type=str, default='total', help='face | total')
 
     args = parser.parse_args()
     collection, red = setup(arg=args)
